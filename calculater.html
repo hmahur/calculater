@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="stylesheet" href="calculater.css">
+</head>
+
+<body>
+    <div class="image">
+        <img src="gorden_images-removebg-preview.png" alt="art" width="1363">
+        <div class="image-2">
+            <img src="svgexport-33.svg" alt="alt">
+        </div>
+        <div class="image-3">
+            <img src="svgexport-34.svg" alt="alt">
+        </div>
+        <div class="image-4">
+            <img src="svgexport-35.svg" alt="alt">
+        </div>
+        <div class="image-5">
+            <img src="svgexport-36.svg" alt="alt">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="s-w">
+            <div class="screen-c" id="demo">
+                
+
+                <div class="h"></div>
+                <div class="screen"></div>
+            </div>
+        </div>
+        <div class="container-2">
+            <button class="btn" onclick="allclear()">AC</button>
+            <button class="btn" onclick="singalclear()">C</button>
+            <button class="btn" onclick="task('%')">%</button>
+            <button class="btn" onclick="task('/')">/</button>
+
+            <button class="btn" onclick="task(1)">1</button>
+            <button class="btn" onclick="task(2)">2</button>
+            <button class="btn" onclick="task(3)">3</button>
+            <button class="btn" onclick="task('+')">+</button>
+            <br>
+            <button class="btn" onclick="task(4)">4</button>
+            <button class="btn" onclick="task(5)">5</button>
+            <button class="btn" onclick="task(6)">6</button>
+            <button class="btn" onclick="task('-')">-</button>
+            <br>
+            <button class="btn" onclick="task(7)">7</button>
+            <button class="btn" onclick="task(8)">8</button>
+            <button class="btn" onclick="task(9)">9</button>
+            <button class="btn" onclick="task('*')">*</button>
+            <br>
+            <button class="btn" onclick="task(0)">0</button>
+            <button class="btn" onclick="secondTask()">=</button>
+        </div>
+    </div>
+    <script>
+        let arr = [];
+        function task(value) {
+            arr.push(value)
+            let demo = document.getElementById('demo');
+            demo.innerHTML = arr.join('');
+
+        }
+        function secondTask() {
+            let strarr = arr.join('');
+            let demo = document.getElementById('demo');
+            let result = eval(strarr);
+            demo.innerHTML = result;
+        }
+        function allclear() {
+            arr = [];
+            let demo = document.getElementById('demo');
+            demo.innerHTML = arr
+        }
+        function singalclear() {
+            arr.pop();
+            let demo = document.getElementById('demo');
+            demo.innerHTML = arr.join('');
+
+        }
+    </script>
+    </div>
+</body>
+
+</html>
