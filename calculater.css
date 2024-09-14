@@ -128,3 +128,51 @@ body {
 .btn:nth-child(21) {
     background-color: #f6b3c6;
 }
+
+
+/* Styles for devices with a width of 768px or smaller (tablets and phones) */
+@media (max-width: 768px) {
+    .container {
+      width: 90%; /* Make the container responsive */
+      height: auto; /* Adjust height for smaller screens */
+    }
+  
+    .s-w {
+      width: 80%;
+      height: auto;
+    }
+  
+    .screen-c {
+      width: 80%;
+      height: auto;
+    }
+  
+    .btn {
+      width: 48px;
+      height: 48px;
+      font-size: 18px;
+    }
+  
+    .btn:nth-child(19) {
+      width: 100px;
+      border-radius: 50px;
+    }
+  
+    .container-2 {
+      width: 100%;
+      gap: 12px;
+    }
+  
+    .image,
+    .image-2,
+    .image-3,
+    .image-4,
+    .image-5 {
+      margin-top: 10px;
+      margin-left: 0;
+      position: relative;
+    }
+  }
+  
+  /* Styles for devices with a width of 480px or
+  
